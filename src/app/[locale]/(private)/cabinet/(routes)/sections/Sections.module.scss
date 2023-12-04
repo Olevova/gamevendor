@@ -1,0 +1,177 @@
+@import 'constants/constans.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  &_btn {
+    display: flex;
+    gap: toRem(24);
+  }
+}
+.create {
+  display: flex;
+  margin: auto;
+
+  &_context {
+    max-width: toRem(323);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_title {
+    margin-top: toRem(24);
+    font-size: toRem(20);
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  &_paragraf {
+    margin-bottom: toRem(24);
+    font-size: toRem(14);
+    font-weight: 400;
+    line-height: 142%;
+    text-align: center;
+  }
+}
+
+.context {
+  margin-left: toRem(-24);
+  margin-right: toRem(-24);
+  &:not(:first-child) {
+    padding-top: toRem(24);
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  &_header {
+    width: 100%;
+    background-color: $grey;
+  }
+  &_row {
+    text-align: start;
+    padding: toRem(16) toRem(24);
+    color: $dark;
+    border-bottom: 1px solid $grey-light-pale;
+    white-space: nowrap;
+
+    & th {
+      font-size: toRem(16);
+      font-weight: 400;
+      line-height: toRem(22);
+    }
+    & button {
+      margin-left: toRem(8);
+    }
+  }
+
+  &_offers {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    & button {
+      margin-left: toRem(74);
+      margin-right: toRem(24);
+    }
+  }
+  &_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: toRem(48);
+    height: toRem(48);
+    border-radius: toRem(16);
+    border: 1px solid $grey-light-pale;
+    margin-right: toRem(13);
+  }
+}
+
+.table_button {
+  width: toRem(48);
+  min-width: auto;
+  padding: 0;
+  background: $blue-pale;
+  color: $accent-light;
+
+  [data-theme='dark'] & {
+    background-color: $grey_misty_36;
+    border-color: transparent;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $grey_misty_12;
+      }
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: end;
+  margin-top: toRem(24);
+  color: $accent-light;
+  cursor: pointer;
+
+  & ul {
+    display: flex;
+    justify-content: center;
+
+    & li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: toRem(48);
+      height: toRem(48);
+    }
+    & li:not(:last-child) {
+      margin-right: toRem(16);
+    }
+  }
+}
+.selected {
+  display: flex;
+  justify-content: center;
+  width: toRem(24);
+  height: toRem(24);
+  border: 1px solid $blue-pale;
+  border-radius: toRem(16);
+  background-color: $blue-pale;
+}
+.form {
+  &_fields {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: toRem(24);
+  }
+
+  .form_field {
+    margin-right: toRem(24);
+    flex: 1;
+  }
+
+  &_footer {
+    border-top: toRem(1) solid $grey_pale;
+    margin-top: toRem(24);
+  }
+
+  .form_submit {
+    margin-left: auto;
+    margin-top: toRem(24);
+  }
+  .subcategory {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    flex: 1;
+  }
+}
+
+.btn {
+  min-width: 0;
+}

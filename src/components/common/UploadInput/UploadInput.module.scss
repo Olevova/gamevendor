@@ -1,0 +1,47 @@
+@import "constants/constans.scss";
+
+.upload_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: toRem(330);
+    margin-top: toRem(16);
+    overflow: hidden;
+    &:first-child {
+        margin-top: 0;
+    }
+    
+}
+    
+
+.input_el{
+    margin-top: toRem(16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: toRem(1) dashed  $grey_pale;
+    border-radius: toRem(12);
+    cursor: pointer;
+    padding: toRem(58) toRem(16);
+
+    [data-theme="dark"] & {
+        background-color: $grey_misty_36;
+        border-color: transparent;
+    }
+
+     &__image{
+        max-width: toRem(300);
+        padding: 0;
+    }
+}
+
+.label {
+    font-weight: 600;
+    color: $dark;
+    [data-theme="dark"] & {
+        background-color: $grey_misty_36;
+        border-color: transparent;
+    }
+}
